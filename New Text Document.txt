@@ -1,0 +1,63 @@
+// Online Rust compiler to run Rust program online
+// Print "Try programiz.pro" message
+
+fn main() {
+
+   let mut s=String::from("hey hello world");
+   s=reverse(&s);
+    println!("{}",s);
+    
+}
+fn reverse(p:& str)->String{
+
+    let mut s=String::new();
+     let mut i=0;
+   //  let mut j=i+1;
+    for c in p.chars()
+    {
+        if c==' '
+        {
+           i=0;
+           s.insert(i,c);
+        }
+        else
+        {
+         s.insert(i,c);
+         i+=1;
+        }
+    println!("{}",s);
+    }
+    s.to_string()
+}
+
+
+
+
+
+
+
+
+
+
+// Online Rust compiler to run Rust program online
+// Print "Try programiz.pro" message
+
+fn main() {
+
+    let mut s=String::from("hello world");
+    let k=reverse(&mut s);
+    println!("Try programiz.pro  {}",k);
+    println!("{}",s);
+}
+
+fn reverse( mut p:&mut String)->&str{
+    let mut k=String::new();
+    for i in p.chars().rev()
+       {k.push(i);}
+       
+       *p=k;
+     // p.clear();
+     //  println!("--){}--",p);
+       //p.push_str(&k);
+       p.as_str()
+}
